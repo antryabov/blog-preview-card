@@ -124,6 +124,8 @@ body {
   }
 }
 
-.preview-card:hover .preview-card__title {
-  color: var(--primary-color);
+@media (any-hover: hover) {
+  .preview-card:hover .preview-card__title {
+    color: var(--primary-color);
+  }
 }
