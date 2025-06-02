@@ -87,7 +87,7 @@ body {
   }
 
   .preview-card__header {
-    padding-top: 1.5rem;
+    padding-block-start: 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
@@ -127,5 +127,11 @@ body {
 @media (any-hover: hover) {
   .preview-card:hover .preview-card__title {
     color: var(--primary-color);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .preview-card__title {
+    transition: color 0s;
   }
 }
