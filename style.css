@@ -88,7 +88,6 @@ body {
   }
 
   .preview-card__header {
-    padding-block-start: 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
