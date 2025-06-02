@@ -7,6 +7,14 @@
 
   --base-font-size: 16px;
   --base-font-family: 'Figtree', sans-serif;
+
+  --border-radius-img: 0.625rem;
+  --border-radius-card: 1.25rem;
+  --border-radius-tag: 0.25rem;
+
+  --card-padding: 1.5rem;
+
+  --box-shadow-card: 0.5rem 0.5rem 0 0 #000000;
 }
 
 @font-face {
@@ -38,8 +46,84 @@ html {
 }
 
 body {
+  width: 100%;
   font-family: var(--base-font-family);
   font-size: 1rem;
+  font-weight: 500;
+  line-height: 150%;
 
   background-color: var(--primary-color);
+}
+
+.main {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preview-card {
+  width: clamp(20.4375rem, 50vw, 24rem);
+  height: clamp(31.3125rem, 75vw, 32.625rem);
+  padding: var(--card-padding);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+  outline: 1px solid var(--gray-950);
+  border-radius: var(--border-radius-card);
+
+  box-shadow: var(--box-shadow-card);
+
+  .preview-card__img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius-img);
+  }
+
+  .preview-card__title {
+    font-size: clamp(1.25rem, 1vw + 0.5rem, 1.5rem);
+    transition: color 0.2s;
+  }
+
+  .preview-card__header {
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    .preview-card__header-tag {
+      width: 5.125rem;
+      height: 1.8125rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: clamp(0.75rem, 1vw + 0.5rem, 0.875rem);
+      font-weight: 800;
+      background-color: var(--primary-color);
+      border-radius: var(--border-radius-tag);
+    }
+
+    .preview-card__header-time {
+      font-size: clamp(0.75rem, 1vw + 0.5rem, 0.875rem);
+    }
+  }
+
+  .preview-card__body-text {
+    padding-block: 1.2rem 1.5rem;
+    font-size: clamp(0.875rem, 1vw + 0.5rem, 1rem);
+    color: var(--gray-500);
+  }
+
+  .author-info {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    font-weight: 800;
+    column-gap: 0.75rem;
+  }
+}
+
+.preview-card:hover .preview-card__title {
+  color: var(--primary-color);
 }
