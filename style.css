@@ -95,7 +95,7 @@ body {
     .preview-card__header-tag {
       width: 5.125rem;
       height: 1.8125rem;
-      padding-block-start: 1.5rem;
+      margin-top: 1.5rem;
       display: flex;
       justify-content: center;
       align-items: center;
